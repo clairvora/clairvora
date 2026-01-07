@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+
+/* Remove Tailwind 4's default border styles */
+*,
+*::before,
+*::after {
+	border-style: none;
+}

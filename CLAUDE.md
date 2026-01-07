@@ -34,7 +34,12 @@ All services share the same D1 database and Clerk auth.
 
 ## Reference Code
 
-The legacy PHP codebase is at `/Users/softdev/Sites/clairvora-legacy/`. Use it to understand existing business logic, database schema, and feature requirements. Key files:
+The legacy PHP codebase is at `/Users/softdev/Sites/clairvora-legacy/`. Use it to understand existing business logic, database schema, and feature requirements.
+
+### Screenshots
+Full-page screenshots of the current live site are at `reference/screenshots/` for design reference.
+
+### Key Files
 
 | File | Purpose |
 |------|---------|
