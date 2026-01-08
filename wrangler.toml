@@ -1,8 +1,10 @@
 name = "clairvora"
 compatibility_date = "2025-01-07"
+compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
-[[d1_databases]]
-binding = "DB"
-database_name = "clairvora"
-database_id = "" # Will be filled after creating the database
+# D1 database - uncomment after creating: wrangler d1 create clairvora
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "clairvora"
+# database_id = ""

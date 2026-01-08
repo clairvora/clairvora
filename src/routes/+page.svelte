@@ -11,6 +11,25 @@
 		{ name: 'River Stone', specialty: 'Past Life Reading', rating: 4.7, reviews: 432, image: '/psychics/profile-6.jpg', price: 2.99, status: 'offline', bio: 'Past life specialist revealing karmic patterns and soul lessons.' },
 	];
 
+	const topRowAdvisors = [
+		{ image: '/advisors/profile-1.jpg', name: 'Luna Rose' },
+		{ image: '/advisors/profile-2.jpg', name: 'Marcus Divine' },
+		{ image: '/advisors/profile-3.jpg', name: 'Celeste Moon' },
+		{ image: '/advisors/profile-4.jpg', name: 'Phoenix Star' },
+		{ image: '/advisors/profile-5.jpg', name: 'Aurora Sage' },
+		{ image: '/advisors/profile-6.jpg', name: 'River Stone' },
+		{ image: '/advisors/profile-7.jpg', name: 'Mystic Maya' },
+	];
+
+	const bottomRowAdvisors = [
+		{ image: '/advisors/profile-8.jpg', name: 'Sage Wilson' },
+		{ image: '/advisors/profile-9.jpg', name: 'Crystal Dawn' },
+		{ image: '/advisors/profile-10.jpg', name: 'Orion Blake' },
+		{ image: '/advisors/profile-11.jpg', name: 'Stella Night' },
+		{ image: '/advisors/profile-12.jpg', name: 'Jasper Moon' },
+		{ image: '/advisors/profile-13.jpg', name: 'Willow Grace' },
+	];
+
 	const aboutLinks = [
 		{ label: 'Homepage', href: '/' },
 		{ label: 'How It Works', href: '/how-it-works' },
@@ -176,6 +195,178 @@
 					<path d="M5 12h14M12 5l7 7-7 7"/>
 				</svg>
 			</button>
+		</div>
+	</div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+	<div class="hiw-container">
+		<div class="hiw-image-col">
+			<img src="/woman-phone-chair-3.png" alt="Woman enjoying a psychic reading" />
+		</div>
+
+		<div class="hiw-content-col">
+			<h2 class="hiw-title">How It Works</h2>
+			<p class="hiw-subtitle">Discover how easy it is to get the guidance you need with Clairvora.</p>
+
+			<div class="hiw-steps">
+				{#each [
+					{ title: 'Choose Your Advisor', desc: 'Browse our handpicked selection of gifted psychics. Each advisor\'s profile includes their specialties, reviews, and availability.' },
+					{ title: 'Select Your Reading Style', desc: 'Decide how you\'d like to connect: choose from call, text, or chat readings.' },
+					{ title: 'Create Your Account', desc: 'If you\'re new to Clairvora, setting up an account is quick and easy.' },
+					{ title: 'Begin Your Reading', desc: 'Connect with your chosen advisor and embark on your journey to clarity.' }
+				] as step, i}
+					<div class="hiw-step">
+						<div class="hiw-step-indicator">
+							<div class="hiw-dot"></div>
+							{#if i < 3}<div class="hiw-line"></div>{/if}
+						</div>
+						<div class="hiw-step-content">
+							<h3>{step.title}</h3>
+							<p>{step.desc}</p>
+						</div>
+					</div>
+				{/each}
+			</div>
+
+			<button class="hiw-cta">Get Started Now</button>
+		</div>
+	</div>
+</section>
+
+<!-- Why Choose Clairvora Section -->
+<section class="why-choose">
+	<div class="why-choose-container">
+		<div class="why-choose-grid">
+			<div class="why-choose-content">
+				<span class="why-choose-eyebrow">Why Clairvora</span>
+				<h2 class="why-choose-title">Why Choose Clairvora?</h2>
+				<p class="why-choose-intro">
+					At Clairvora, we believe that everyone deserves access to authentic, world-class
+					psychic guidance. Whether you're seeking clarity, comfort, or direction, our
+					carefully selected psychics are here to help you unlock the answers you seek.
+				</p>
+
+				<div class="why-choose-highlights">
+					{#each [
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`, text: 'Trusted Psychics' },
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`, text: 'Private & Secure' },
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`, text: '24/7 Available' },
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`, text: 'Authentic Readings' },
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`, text: 'Global Reach' },
+						{ icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`, text: 'Growing Reputation' }
+					] as highlight}
+						<div class="why-choose-highlight">
+							<span class="why-choose-highlight-icon">{@html highlight.icon}</span>
+							<span class="why-choose-highlight-text">{highlight.text}</span>
+						</div>
+					{/each}
+				</div>
+
+				<div class="why-choose-features">
+					{#each [
+						{
+							icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+							title: 'Global Talent',
+							description: 'We handpick the most gifted psychics from around the world to ensure you receive genuine, insightful readings.'
+						},
+						{
+							icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+							title: 'Personalized Options',
+							description: 'Choose the type of connection that suits you best—call, text, or chat readings—all designed to fit seamlessly into your life.'
+						},
+						{
+							icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+							title: 'Fresh Perspective',
+							description: 'As a newer platform, we bring a fresh approach to psychic readings, focusing on trust, accuracy, and client satisfaction.'
+						}
+					] as feature}
+						<div class="why-choose-feature">
+							<div class="why-choose-feature-icon">
+								{@html feature.icon}
+							</div>
+							<div class="why-choose-feature-content">
+								<h3>{feature.title}</h3>
+								<p>{feature.description}</p>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+
+			<div class="why-choose-image">
+				<div class="why-choose-image-wrapper">
+					<img src="/woman-happy.jpg?v=2" alt="Happy Clairvora client" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Find Your Advisor Section -->
+<section class="find-advisor">
+	<div class="find-advisor-bg"></div>
+	<div class="find-advisor-container">
+		<div class="find-advisor-header">
+			<span class="find-advisor-badge">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+				</svg>
+				<span>Trusted Advisors</span>
+			</span>
+			<h2 class="find-advisor-title">Find Your Advisor</h2>
+			<p class="find-advisor-description">
+				Discover the perfect psychic to guide you on your journey. Each brings unique talents and specialties, ready to provide you with clarity and insight.
+			</p>
+		</div>
+
+		<div class="find-advisor-avatars">
+			<div class="find-advisor-row find-advisor-top-row">
+				{#each topRowAdvisors as advisor, i}
+					<div class="find-advisor-avatar-wrapper" style="--delay: {i * 0.08}s">
+						<div class="find-advisor-avatar-border">
+							<img src={advisor.image} alt={advisor.name} />
+						</div>
+					</div>
+				{/each}
+			</div>
+			<div class="find-advisor-row find-advisor-bottom-row">
+				{#each bottomRowAdvisors as advisor, i}
+					<div class="find-advisor-avatar-wrapper" style="--delay: {(i + 7) * 0.08}s">
+						<div class="find-advisor-avatar-border">
+							<img src={advisor.image} alt={advisor.name} />
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+
+		<div class="find-advisor-stats">
+			<div class="find-advisor-stat">
+				<span class="find-advisor-stat-value">500+</span>
+				<span class="find-advisor-stat-label">Verified Advisors</span>
+			</div>
+			<div class="find-advisor-stat-divider"></div>
+			<div class="find-advisor-stat">
+				<span class="find-advisor-stat-value">50K+</span>
+				<span class="find-advisor-stat-label">Happy Clients</span>
+			</div>
+			<div class="find-advisor-stat-divider"></div>
+			<div class="find-advisor-stat">
+				<span class="find-advisor-stat-value">4.9</span>
+				<span class="find-advisor-stat-label">Average Rating</span>
+			</div>
+		</div>
+
+		<div class="find-advisor-cta">
+			<button class="find-advisor-button">
+				<span>Find an Advisor</span>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M5 12h14M12 5l7 7-7 7"/>
+				</svg>
+			</button>
+			<span class="find-advisor-subtext">Browse by specialty, availability, or rating</span>
 		</div>
 	</div>
 </section>
@@ -982,6 +1173,598 @@
 		}
 	}
 
+	/* How It Works Section */
+	.how-it-works {
+		background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
+		padding: 6rem 2rem;
+		color: white;
+	}
+
+	.hiw-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	.hiw-image-col {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	.hiw-image-col img {
+		max-height: 600px;
+		width: auto;
+		object-fit: contain;
+		filter: drop-shadow(0 20px 60px rgba(118, 56, 250, 0.3));
+	}
+
+	.hiw-content-col {
+		padding: 2rem 0;
+	}
+
+	.hiw-title {
+		font-size: 2.75rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hiw-subtitle {
+		font-size: 1.1rem;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 2.5rem;
+		max-width: 450px;
+	}
+
+	.hiw-steps {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2.5rem;
+	}
+
+	.hiw-step {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.hiw-step-indicator {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 0.35rem;
+	}
+
+	.hiw-dot {
+		width: 14px;
+		height: 14px;
+		background: linear-gradient(135deg, #7638FA 0%, #D300C5 100%);
+		border-radius: 50%;
+		flex-shrink: 0;
+		box-shadow: 0 0 16px rgba(211, 0, 197, 0.6);
+	}
+
+	.hiw-line {
+		width: 2px;
+		flex: 1;
+		background: linear-gradient(180deg, rgba(118, 56, 250, 0.6) 0%, rgba(118, 56, 250, 0.2) 100%);
+		margin: 0.5rem 0;
+		min-height: 50px;
+	}
+
+	.hiw-step-content {
+		padding-bottom: 1.5rem;
+	}
+
+	.hiw-step-content h3 {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.hiw-step-content p {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	.hiw-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: linear-gradient(135deg, #7638FA 0%, #D300C5 50%, #FF0069 100%);
+		color: white;
+		padding: 1rem 2.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 1.1rem;
+		border: none;
+		cursor: pointer;
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.hiw-cta:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 40px rgba(211, 0, 197, 0.4);
+	}
+
+	@media (max-width: 1024px) {
+		.hiw-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.hiw-image-col {
+			order: -1;
+		}
+
+		.hiw-image-col img {
+			max-height: 400px;
+		}
+
+		.hiw-title {
+			font-size: 2.25rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.how-it-works {
+			padding: 4rem 1.5rem;
+		}
+
+		.hiw-title {
+			font-size: 2rem;
+		}
+
+		.hiw-image-col img {
+			max-height: 300px;
+		}
+	}
+
+	/* Why Choose Clairvora Section */
+	.why-choose {
+		padding: 6rem 2rem;
+		background: #FFF9F0;
+	}
+
+	.why-choose-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.why-choose-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.why-choose-content {
+		padding-right: 2rem;
+	}
+
+	.why-choose-eyebrow {
+		display: inline-block;
+		background: linear-gradient(135deg, #7638FA 0%, #D300C5 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.75rem;
+	}
+
+	.why-choose-title {
+		font-size: 2.75rem;
+		font-weight: 700;
+		color: #1a1a2e;
+		margin-bottom: 1.25rem;
+		line-height: 1.2;
+	}
+
+	.why-choose-intro {
+		font-size: 1.05rem;
+		color: #555;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+
+	.why-choose-highlights {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem 1rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.why-choose-highlight {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.why-choose-highlight-icon {
+		color: #D96C4B;
+		display: flex;
+		align-items: center;
+	}
+
+	.why-choose-highlight-text {
+		font-size: 0.9rem;
+		color: #444;
+		font-weight: 500;
+	}
+
+	.why-choose-features {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.why-choose-feature {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.why-choose-feature-icon {
+		width: 48px;
+		height: 48px;
+		background: linear-gradient(135deg, rgba(217, 108, 75, 0.1) 0%, rgba(217, 108, 75, 0.15) 100%);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #D96C4B;
+		flex-shrink: 0;
+	}
+
+	.why-choose-feature-content h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #1a1a2e;
+		margin-bottom: 0.375rem;
+	}
+
+	.why-choose-feature-content p {
+		font-size: 0.925rem;
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.why-choose-image {
+		position: relative;
+	}
+
+	.why-choose-image-wrapper {
+		position: relative;
+	}
+
+	.why-choose-image-wrapper img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* Tablet */
+	@media (max-width: 1024px) {
+		.why-choose-grid {
+			gap: 3rem;
+		}
+
+		.why-choose-title {
+			font-size: 2.25rem;
+		}
+
+		.why-choose-highlights {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* Mobile */
+	@media (max-width: 768px) {
+		.why-choose {
+			padding: 4rem 1.5rem;
+		}
+
+		.why-choose-grid {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+
+		.why-choose-content {
+			padding-right: 0;
+			order: 2;
+		}
+
+		.why-choose-image {
+			order: 1;
+		}
+
+		.why-choose-title {
+			font-size: 2rem;
+		}
+
+		.why-choose-highlights {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.why-choose {
+			padding: 3rem 1rem;
+		}
+
+		.why-choose-title {
+			font-size: 1.75rem;
+		}
+
+		.why-choose-intro {
+			font-size: 1rem;
+		}
+
+		.why-choose-highlights {
+			grid-template-columns: 1fr 1fr;
+			gap: 0.5rem;
+		}
+
+		.why-choose-highlight-text {
+			font-size: 0.85rem;
+		}
+
+		.why-choose-feature-icon {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	/* Find Your Advisor Section */
+	.find-advisor {
+		padding: 6rem 2rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.find-advisor-bg {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(135deg, #C800BA 0%, #D300C5 40%, #E5007A 100%);
+	}
+
+	.find-advisor-container {
+		max-width: 1100px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	.find-advisor-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.find-advisor-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(10px);
+		padding: 0.5rem 1rem;
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: white;
+		margin-bottom: 1.25rem;
+	}
+
+	.find-advisor-title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 1rem;
+		letter-spacing: -0.02em;
+	}
+
+	.find-advisor-description {
+		font-size: 1.15rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.7;
+	}
+
+	.find-advisor-avatars {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+		margin-bottom: 3rem;
+	}
+
+	.find-advisor-row {
+		display: flex;
+		justify-content: center;
+	}
+
+	.find-advisor-top-row {
+		margin-bottom: -25px;
+		z-index: 1;
+	}
+
+	.find-advisor-bottom-row {
+		z-index: 0;
+	}
+
+	.find-advisor-avatar-wrapper {
+		margin: 0 -10px;
+		animation: findAdvisorFloat 3s ease-in-out infinite;
+		animation-delay: var(--delay);
+	}
+
+	@keyframes findAdvisorFloat {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(-8px); }
+	}
+
+	.find-advisor-avatar-border {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		padding: 4px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+		transition: transform 0.3s, box-shadow 0.3s;
+		cursor: pointer;
+	}
+
+	.find-advisor-avatar-border:hover {
+		transform: scale(1.15) translateY(-8px);
+		box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+		z-index: 10;
+		position: relative;
+	}
+
+	.find-advisor-avatar-border img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.find-advisor-stats {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5rem;
+		margin-bottom: 2.5rem;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		padding: 1.5rem 3rem;
+		border-radius: 20px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.find-advisor-stat {
+		text-align: center;
+		color: white;
+	}
+
+	.find-advisor-stat-value {
+		display: block;
+		font-size: 1.75rem;
+		font-weight: 700;
+	}
+
+	.find-advisor-stat-label {
+		font-size: 0.85rem;
+		opacity: 0.85;
+	}
+
+	.find-advisor-stat-divider {
+		width: 1px;
+		height: 40px;
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	.find-advisor-cta {
+		text-align: center;
+	}
+
+	.find-advisor-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: white;
+		color: #D300C5;
+		padding: 1.125rem 2.75rem;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 1.1rem;
+		border: none;
+		cursor: pointer;
+		transition: transform 0.2s, box-shadow 0.2s;
+		margin-bottom: 0.75rem;
+	}
+
+	.find-advisor-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+	}
+
+	.find-advisor-subtext {
+		display: block;
+		color: rgba(255, 255, 255, 0.75);
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 900px) {
+		.find-advisor-avatar-border {
+			width: 80px;
+			height: 80px;
+		}
+
+		.find-advisor-top-row {
+			margin-bottom: -20px;
+		}
+
+		.find-advisor-stats {
+			gap: 1.5rem;
+			padding: 1.25rem 2rem;
+		}
+
+		.find-advisor-stat-value {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.find-advisor {
+			padding: 4rem 1.5rem;
+		}
+
+		.find-advisor-title {
+			font-size: 2.5rem;
+		}
+
+		.find-advisor-row {
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.find-advisor-avatar-wrapper {
+			margin: 0;
+		}
+
+		.find-advisor-top-row {
+			margin-bottom: 0.5rem;
+		}
+
+		.find-advisor-avatar-border {
+			width: 70px;
+			height: 70px;
+		}
+
+		.find-advisor-stats {
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1.5rem;
+		}
+
+		.find-advisor-stat-divider {
+			width: 60px;
+			height: 1px;
+		}
+	}
+
 	/* Satisfaction Guarantee Section */
 	.guarantee {
 		padding: 6rem 2rem;
@@ -1075,8 +1858,6 @@
 		display: flex;
 		justify-content: center;
 		gap: 3rem;
-		padding-top: 2rem;
-		border-top: 1px solid rgba(118, 56, 250, 0.15);
 	}
 
 	.trust-item {
