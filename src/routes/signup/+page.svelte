@@ -10,7 +10,7 @@
 	<!-- Left: Branding Panel -->
 	<div class="brand-panel">
 		<div class="brand-content">
-			<div class="brand-logo">Clairvora</div>
+			<a href="/"><img src="/logo/clairvora-logo.png" alt="Clairvora" class="brand-logo" /></a>
 			<h2 class="brand-tagline">Begin Your Journey</h2>
 			<p class="brand-description">
 				Join thousands finding clarity through trusted psychic guidance on love, career, and life's path.
@@ -113,16 +113,15 @@
 	.brand-content {
 		position: relative;
 		z-index: 1;
-		text-align: center;
+		text-align: left;
 		color: white;
 		max-width: 400px;
 	}
 
 	.brand-logo {
-		font-size: 2.5rem;
-		font-weight: 700;
-		letter-spacing: -0.02em;
-		margin-bottom: 2rem;
+		height: 27px;
+		width: auto;
+		margin-bottom: 3rem;
 	}
 
 	.brand-tagline {
@@ -141,7 +140,7 @@
 
 	.brand-stats {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 3rem;
 	}
 
