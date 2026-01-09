@@ -76,6 +76,15 @@ npm run build    # Build for production
 npm run preview  # Preview production build
 ```
 
+## Design System
+
+See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) for complete UI/UX guidelines including:
+- Brand colors and gradients
+- Typography scale
+- Component patterns (buttons, cards, avatars)
+- Section layouts and responsive breakpoints
+- Animation and transition specs
+
 ## Conventions
 
 - Use Svelte 5 runes (`$state`, `$derived`, `$effect`)
@@ -83,11 +92,102 @@ npm run preview  # Preview production build
 - Form handling via SvelteKit form actions
 - Type-safe database queries with Drizzle ORM (when added)
 - All API routes return JSON with consistent error structure
+- Follow design system for all UI work
+
+## Authentication (Clerk)
+
+Authentication is handled by [Clerk](https://clerk.com) via `clerk-sveltekit` package.
+
+### Sign-in Methods Enabled
+- Email/Password
+- Google OAuth
+- Facebook OAuth
+- Apple OAuth
+
+### Architecture
+
+```
+src/
+├── hooks.server.ts      # handleClerk() middleware - validates sessions on every request
+├── hooks.client.ts      # initializeClerkClient() - client-side initialization
+└── routes/
+    ├── login/+page.svelte   # Custom sign-in page with Clerk SignIn component
+    └── signup/+page.svelte  # Custom sign-up page with Clerk SignUp component
+```
+
+### Key Files
+
+**hooks.server.ts** - Server middleware
+```typescript
+import { handleClerk } from 'clerk-sveltekit/server';
+import { CLERK_SECRET_KEY } from '$env/static/private';
+
+export const handle = handleClerk(CLERK_SECRET_KEY, {
+  signInUrl: '/login'
+});
+```
+
+**hooks.client.ts** - Client initialization
+```typescript
+import { initializeClerkClient } from 'clerk-sveltekit/client';
+import { PUBLIC_CLERK_PUBLISHABLE_KEY } from '$env/static/public';
+
+initializeClerkClient(PUBLIC_CLERK_PUBLISHABLE_KEY, {
+  afterSignInUrl: '/account/client',
+  afterSignUpUrl: '/account/client',
+  signInUrl: '/login',
+  signUpUrl: '/signup'
+});
+```
+
+### Component Import Pattern
+
+```typescript
+// Correct - default imports from specific paths
+import SignIn from 'clerk-sveltekit/client/SignIn.svelte';
+import SignUp from 'clerk-sveltekit/client/SignUp.svelte';
+
+// Wrong - will fail
+import { SignIn } from 'clerk-sveltekit/client';
+```
+
+### Custom Styling
+
+Clerk components are styled via `:global()` CSS selectors:
+
+| Selector | Purpose |
+|----------|---------|
+| `.cl-formButtonPrimary` | Primary button (uses brand gradient) |
+| `.cl-socialButtonsBlockButton` | OAuth buttons |
+| `.cl-formFieldInput` | Input fields (12px border radius) |
+| `.cl-footerActionLink` | Link styling (brand magenta) |
+| `.cl-internal-b3fm6y` | "Secured by Clerk" badge |
+| `.cl-headerTitle`, `.cl-headerSubtitle` | Hidden (we show our own headers) |
+| `.cl-card`, `.cl-main`, `.cl-form` | Container resets (transparent, no padding) |
+
+### Protected Route Pattern
+
+```typescript
+// src/routes/account/+page.server.ts
+import { redirect } from '@sveltejs/kit';
+
+export const load = async ({ locals }) => {
+  if (!locals.session) {
+    throw redirect(302, '/login');
+  }
+  return { user: locals.session.user };
+};
+```
+
+### Clerk Dashboard
+
+Manage users, sessions, OAuth providers: https://dashboard.clerk.com
 
 ## Environment Variables
 
 Set via Cloudflare dashboard or `wrangler secret`:
-- `CLERK_SECRET_KEY` - Clerk authentication
+- `PUBLIC_CLERK_PUBLISHABLE_KEY` - Clerk client key (safe for frontend)
+- `CLERK_SECRET_KEY` - Clerk server key (keep secret)
 - `AUTHORIZE_NET_API_LOGIN` - Payment processing
 - `AUTHORIZE_NET_TRANSACTION_KEY` - Payment processing
 - `SENDGRID_API_KEY` - Email delivery

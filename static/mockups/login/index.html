@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Mockups - Clairvora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            min-height: 100vh;
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .mockups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .mockup-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .mockup-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .mockup-preview {
+            height: 280px;
+            overflow: hidden;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .mockup-preview iframe {
+            width: 200%;
+            height: 200%;
+            border: none;
+            transform: scale(0.5);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+
+        .mockup-info {
+            padding: 1.5rem;
+        }
+
+        .mockup-info h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+        }
+
+        .mockup-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .mockup-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #D300C5;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .mockup-link:hover {
+            text-decoration: underline;
+        }
+
+        .mockup-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to site
+        </a>
+
+        <h1>Login Page Mockups</h1>
+        <p class="subtitle">5 design variations following the Clairvora design system</p>
+
+        <div class="mockups-grid">
+            <div class="mockup-card">
+                <div class="mockup-preview">
+                    <iframe src="v1-centered-card.html"></iframe>
+                </div>
+                <div class="mockup-info">
+                    <h2>V1: Centered Card</h2>
+                    <p>Classic centered login card on full gradient background. Clean and focused with trust badges at bottom.</p>
+                    <a href="v1-centered-card.html" class="mockup-link" target="_blank">
+                        View Full Size
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mockup-card">
+                <div class="mockup-preview">
+                    <iframe src="v2-split-screen.html"></iframe>
+                </div>
+                <div class="mockup-info">
+                    <h2>V2: Split Screen</h2>
+                    <p>50/50 layout with branded left panel featuring tagline and stats. Form on right. Great for desktop.</p>
+                    <a href="v2-split-screen.html" class="mockup-link" target="_blank">
+                        View Full Size
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mockup-card">
+                <div class="mockup-preview">
+                    <iframe src="v3-floating-glass.html"></iframe>
+                </div>
+                <div class="mockup-info">
+                    <h2>V3: Floating Glass</h2>
+                    <p>Glassmorphism card with animated background orbs. Dark theme matching the "How It Works" section style.</p>
+                    <a href="v3-floating-glass.html" class="mockup-link" target="_blank">
+                        View Full Size
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mockup-card">
+                <div class="mockup-preview">
+                    <iframe src="v4-hero-image.html"></iframe>
+                </div>
+                <div class="mockup-info">
+                    <h2>V4: Hero Image</h2>
+                    <p>Split layout with hero image and testimonial quote. Uses existing hero-couple.png asset. Premium feel.</p>
+                    <a href="v4-hero-image.html" class="mockup-link" target="_blank">
+                        View Full Size
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mockup-card">
+                <div class="mockup-preview">
+                    <iframe src="v5-minimal-warm.html"></iframe>
+                </div>
+                <div class="mockup-info">
+                    <h2>V5: Minimal Warm</h2>
+                    <p>Clean minimal design with warm gradient background. Includes header, footer, and advisor preview. Full page layout.</p>
+                    <a href="v5-minimal-warm.html" class="mockup-link" target="_blank">
+                        View Full Size
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

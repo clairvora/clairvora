@@ -5,4 +5,10 @@
 *::before,
 *::after {
 	border-style: none;
+	border-width: 0;
+}
+
+hr {
+	border: none;
+	height: 0;
 }
