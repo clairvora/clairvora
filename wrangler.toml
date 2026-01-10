@@ -3,8 +3,8 @@ compatibility_date = "2025-01-07"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
-# D1 database - uncomment after creating: wrangler d1 create clairvora
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "clairvora"
-# database_id = ""
+[[d1_databases]]
+binding = "DB"
+database_name = "clairvora-db"
+database_id = "afa858d1-674f-4d09-ba52-4c06fdc26160"
+migrations_dir = "src/lib/server/db/migrations"

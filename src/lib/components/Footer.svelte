@@ -178,11 +178,13 @@
 	}
 
 	.app-banner-content {
-		max-width: 1000px;
+		max-width: 1200px;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		gap: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.app-mockup {
@@ -247,15 +249,17 @@
 
 	/* Main Footer */
 	.footer-main {
-		padding: 3rem 2rem;
+		padding: 3rem 0;
 	}
 
 	.footer-content {
-		max-width: 1100px;
+		max-width: 1200px;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: 180px repeat(4, 1fr);
 		gap: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	/* Brand Column */
@@ -348,6 +352,8 @@
 
 	/* Bottom Bar */
 	.footer-bottom {
+		max-width: 1200px;
+		margin: 0 auto;
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 		padding: 1.25rem 2rem;
 		text-align: center;

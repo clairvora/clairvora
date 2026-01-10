@@ -67,7 +67,7 @@
 
 <!-- Timeline Steps Section -->
 <section class="steps-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="section-header">
 			<h2>How It Works</h2>
 			<p>Four simple steps to get the guidance you need</p>
@@ -131,7 +131,7 @@
 
 <!-- Connection Types Section -->
 <section class="connection-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="section-header light">
 			<h2>Multiple Ways to Connect</h2>
 			<p>Choose the reading style that fits your life</p>
@@ -155,7 +155,7 @@
 
 <!-- Trust Section -->
 <section class="trust-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="section-header">
 			<h2>Why Trust Clairvora?</h2>
 			<p>Your satisfaction and security are our top priorities</p>
@@ -189,7 +189,7 @@
 
 <!-- Final CTA Section -->
 <section class="cta-section">
-	<div class="container">
+	<div class="page-container">
 		<h2>Ready to Begin Your Journey?</h2>
 		<p>Join thousands who have found clarity and guidance through Clairvora</p>
 		<div class="cta-buttons">
@@ -209,7 +209,7 @@
 	/* Hero Section */
 	.hero {
 		background: linear-gradient(135deg, #7638FA 0%, #D300C5 40%, #FF0069 70%, #FF7A00 100%);
-		padding: 10rem 2rem 12rem;
+		padding: 10rem 0 12rem;
 		text-align: center;
 		position: relative;
 		color: white;
@@ -218,6 +218,7 @@
 	.hero-content {
 		max-width: 800px;
 		margin: 0 auto;
+		padding: 0 2rem;
 		position: relative;
 		z-index: 1;
 	}
@@ -305,13 +306,8 @@
 
 	/* Steps Section */
 	.steps-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: white;
-	}
-
-	.container {
-		max-width: 1000px;
-		margin: 0 auto;
 	}
 
 	.section-header {
@@ -462,7 +458,7 @@
 
 	/* Connection Section */
 	.connection-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
 	}
 
@@ -520,7 +516,7 @@
 
 	/* Trust Section */
 	.trust-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(180deg, #faf5ff 0%, #fdf2f8 50%, #fff7ed 100%);
 	}
 
@@ -571,7 +567,7 @@
 
 	/* CTA Section */
 	.cta-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(135deg, #7638FA 0%, #D300C5 50%, #FF0069 100%);
 		text-align: center;
 		color: white;

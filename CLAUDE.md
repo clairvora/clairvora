@@ -85,6 +85,15 @@ See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) for complete UI/UX guidelines including
 - Section layouts and responsive breakpoints
 - Animation and transition specs
 
+## Database
+
+See [DATABASE.md](DATABASE.md) for database architecture including:
+- Why we chose Drizzle ORM (vs Kysely, raw SQL, Prisma)
+- D1 transaction model constraints (critical for payments)
+- Read-after-write consistency with D1 Sessions API
+- Ledger-style patterns for wallet/financial data
+- Migration workflow and security considerations
+
 ## Conventions
 
 - Use Svelte 5 runes (`$state`, `$derived`, `$effect`)

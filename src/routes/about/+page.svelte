@@ -88,7 +88,7 @@
 
 <!-- Mission Section -->
 <section class="mission-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="mission-grid">
 			<div class="mission-content">
 				<span class="eyebrow-dark">Our Mission</span>
@@ -112,7 +112,7 @@
 
 <!-- Reading Formats Section -->
 <section class="formats-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="section-header">
 			<span class="eyebrow-dark">How We Connect</span>
 			<h2>Three Flexible Reading Formats</h2>
@@ -135,7 +135,7 @@
 
 <!-- Why Choose Us Section -->
 <section class="differentiators-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="diff-grid">
 			<div class="diff-content">
 				<span class="eyebrow-light">Why Clairvora</span>
@@ -167,7 +167,7 @@
 
 <!-- Categories Section -->
 <section class="categories-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="section-header">
 			<span class="eyebrow-dark">Specializations</span>
 			<h2>Reading Categories</h2>
@@ -184,7 +184,7 @@
 
 <!-- Testimonial Section -->
 <section class="testimonial-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="testimonial-card">
 			<div class="quote-icon">
 				<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
@@ -209,7 +209,7 @@
 
 <!-- CTA Section -->
 <section class="cta-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="cta-content">
 			<h2>Ready to Find Your Clarity?</h2>
 			<p>Connect with a trusted advisor today and take the first step on your journey.</p>
@@ -233,7 +233,7 @@
 		align-items: center;
 		justify-content: center;
 		background: linear-gradient(135deg, #7638FA 0%, #D300C5 40%, #FF0069 70%, #FF7A00 100%);
-		padding: 8rem 2rem 6rem;
+		padding: 8rem 0 6rem;
 		text-align: center;
 		overflow: hidden;
 	}
@@ -289,6 +289,7 @@
 		position: relative;
 		z-index: 1;
 		max-width: 800px;
+		padding: 0 2rem;
 	}
 
 	.eyebrow {
@@ -331,13 +332,8 @@
 
 	/* Mission Section */
 	.mission-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: white;
-	}
-
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
 	}
 
 	.mission-grid {
@@ -382,7 +378,7 @@
 
 	/* Formats Section */
 	.formats-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: #f8fafc;
 	}
 
@@ -450,7 +446,7 @@
 
 	/* Differentiators Section */
 	.differentiators-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
 	}
 
@@ -537,7 +533,7 @@
 
 	/* Categories Section */
 	.categories-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: white;
 	}
 
@@ -566,7 +562,7 @@
 
 	/* Testimonial Section */
 	.testimonial-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 50%, #fff7ed 100%);
 	}
 
@@ -624,7 +620,7 @@
 
 	/* CTA Section */
 	.cta-section {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(135deg, #D300C5 0%, #FF0069 100%);
 		text-align: center;
 	}

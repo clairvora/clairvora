@@ -424,9 +424,11 @@
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
-		padding: 2rem;
+		justify-content: center;
 		padding-top: 6rem;
 		padding-bottom: 12rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 		position: relative;
 		overflow: hidden;
 	}
@@ -446,8 +448,8 @@
 	}
 
 	.hero-content {
-		max-width: 1200px;
-		margin: 0 auto;
+		width: 100%;
+		max-width: 1170px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
@@ -682,15 +684,16 @@
 	/* Psychic Advisors Section */
 	.advisors-section {
 		background: #ffffff;
-		padding: 3rem 2rem 6rem;
+		padding: 3rem 0 6rem;
 		position: relative;
 		overflow: hidden;
 		margin-top: -2px;
 	}
 
 	.advisors-container {
-		max-width: 1000px;
+		max-width: 1170px;
 		margin: 0 auto;
+		padding: 0 2rem;
 		position: relative;
 		z-index: 1;
 	}
@@ -929,13 +932,14 @@
 	/* How It Works Section */
 	.how-it-works {
 		background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		color: white;
 	}
 
 	.hiw-container {
-		max-width: 1300px;
+		max-width: 1170px;
 		margin: 0 auto;
+		padding: 0 2rem;
 		display: grid;
 		grid-template-columns: 1.2fr 1fr;
 		align-items: center;
@@ -1083,13 +1087,14 @@
 
 	/* Why Choose Clairvora Section */
 	.why-choose {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: #FFF9F0;
 	}
 
 	.why-choose-container {
-		max-width: 1200px;
+		max-width: 1170px;
 		margin: 0 auto;
+		padding: 0 2rem;
 	}
 
 	.why-choose-grid {
@@ -1281,7 +1286,7 @@
 
 	/* Find Your Advisor Section */
 	.find-advisor {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		position: relative;
 		overflow: hidden;
 	}
@@ -1293,8 +1298,9 @@
 	}
 
 	.find-advisor-container {
-		max-width: 1100px;
+		max-width: 1170px;
 		margin: 0 auto;
+		padding: 0 2rem;
 		position: relative;
 		z-index: 1;
 	}
@@ -1545,14 +1551,15 @@
 
 	/* Satisfaction Guarantee Section */
 	.guarantee {
-		padding: 6rem 2rem;
+		padding: 6rem 0;
 		background: linear-gradient(180deg, #faf5ff 0%, #fdf2f8 50%, #fff7ed 100%);
 		position: relative;
 	}
 
 	.guarantee-container {
-		max-width: 1000px;
+		max-width: 1170px;
 		margin: 0 auto;
+		padding: 0 2rem;
 	}
 
 	.guarantee-content {

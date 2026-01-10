@@ -31,7 +31,7 @@
 
 <!-- Content Section -->
 <section class="content-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="content-grid">
 			<div class="main-content">
 				<!-- General Tips -->
@@ -245,7 +245,7 @@
 
 <!-- CTA Section -->
 <section class="cta-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="cta-content">
 			<h2>Start Your Journey Today</h2>
 			<p>Now that you're prepared, connect with a trusted advisor and discover the clarity you seek.</p>
@@ -366,14 +366,9 @@
 
 	/* Content Section */
 	.content-section {
-		padding: 4rem 2rem 6rem;
+		padding: 4rem 0 6rem;
 		background: white;
 		margin-top: -2px;
-	}
-
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
 	}
 
 	.content-grid {

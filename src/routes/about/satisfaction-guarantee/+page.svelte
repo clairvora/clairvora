@@ -30,7 +30,7 @@
 
 <!-- Content Section -->
 <section class="content-section">
-	<div class="container">
+	<div class="page-container">
 		<div class="content-grid">
 			<div class="main-content">
 				<div class="terms-content">
@@ -200,14 +200,9 @@
 
 	/* Content Section */
 	.content-section {
-		padding: 4rem 2rem 6rem;
+		padding: 4rem 0 6rem;
 		background: white;
 		margin-top: -2px;
-	}
-
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
 	}
 
 	.content-grid {
